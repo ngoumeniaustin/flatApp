@@ -1,0 +1,29 @@
+<odoo>
+    <record model="ir.ui.view" id="offer_form_view">
+        <field name="name">offer.form</field>
+        <field name="model">offer.flat</field>
+        <field name="arch" type="xml">
+            <form string="Offer Form"><sheet><group>
+            <group string="Donnees">
+                <field name="flat"/>
+                <field name="buyer"/>
+                <field name="offer"/>
+            </group>
+            </group></sheet></form>
+
+        </field>
+    </record>
+    <record model="ir.ui.view" id="offer_tree_view">
+        <field name="name">offer.tree</field>
+        <field name="model">offer.flat</field>
+        <field name="arch" type="xml">
+            <tree string="offer Tree">
+                
+                 <field name="flat"/>
+                <field name="buyer"/>
+                <field name="offer"/>
+            </tree>
+        </field>
+    </record>
+    
+</odoo>

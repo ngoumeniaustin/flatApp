@@ -1,0 +1,15 @@
+{% extends "_baserealtor.html" %}
+
+    
+{% block content %}
+
+<h2 class="text-secondary" style="margin-top: 50px; margin-left: 10px;">{{result}}.</h2>
+<button id="gobutton" class="bg-info text-white" style="margin-top: 50px; margin-left: 10px;"> Go To Flat Page</button>
+<script>
+    $(document).ready(function(){
+      $("#gobutton").click(function(){
+        window.location.replace("{% url 'odoorealtor:realtor' %}");
+      });
+    });
+</script>
+{% endblock content %}

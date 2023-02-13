@@ -1,0 +1,27 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+{% if  result == 'Failed' %}
+
+    <h2 class="text-danger" style="margin-top: 50px; margin-left: 10px;">Connection  {{result}}. Check your login info</h2>
+    <button id="backbutton" class="bg-info text-white" style="margin-top: 50px; margin-left: 10px;"> Back To Connection Page</button>
+    
+{% else %}
+    <h2 class="text-success" style="margin-top: 50px; margin-left: 10px;">Connection  {{result}}.</h2>
+    <button id="gobutton" class="bg-info text-white" style="margin-top: 50px; margin-left: 10px;"> Go To Realtor App</button>
+{% endif %}
+
+<script>
+    $(document).ready(function(){
+      $("#backbutton").click(function(){
+        window.location.replace("{% url 'odooconfig:index' %}");
+      });
+       
+      $("#gobutton").click(function(){
+        window.location.replace("{% url 'odoorealtor:realtor' %}");
+      });
+    });
+</script>
+{% endblock content %}
+

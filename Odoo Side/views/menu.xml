@@ -1,0 +1,23 @@
+<odoo>
+    <record id="flat_list_action" model="ir.actions.act_window">
+        <field name="name">Flat Stock</field>
+        <field name="res_model">realtor.flat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <record id="offer_list_action" model="ir.actions.act_window">
+        <field name="name">Offer</field>
+        <field name="res_model">offer.flat</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <menuitem id="main_realtor_menu" name="Realtor">
+        <menuitem id="realtor_menu" name="Realtor">
+            <menuitem id="flat_menu" action="flat_list_action"/>  
+        </menuitem>
+         <menuitem id="offer_menu" name="Offer">
+            <menuitem id="offer_flat_menu" action="offer_list_action"/>  
+        </menuitem>
+       
+       
+    </menuitem>
+   
+</odoo>

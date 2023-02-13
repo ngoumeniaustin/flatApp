@@ -1,0 +1,31 @@
+{% extends "_base.html" %}
+
+{% block content %}
+
+<div id="form">
+    <form action="{% url 'odooconfig:connection' %}" method="post" style="margin: 50px;"> 
+    
+        {% csrf_token %} 
+        
+        <label for="username">Username</label> 
+    
+        <input  type="text"  name="username" required >
+    
+        <label for="password">Password</label> 
+    
+        <input style="font-family: 'pass', 'Roboto', Helvetica, Arial, sans-serif; " type="password" name="password" required> 
+
+        <label for="database">Database</label> 
+    
+        <input  type="text" name="database" required> 
+
+        <label for="yoururl">Your Url   </label> 
+    
+        <input  type="text" name="yoururl" required> 
+    
+        <input type="submit" value="Connect">
+    
+    </form>
+</div>
+
+{% endblock content %}

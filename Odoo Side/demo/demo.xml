@@ -1,0 +1,254 @@
+<odoo>
+    <data noupdate="1">
+<!--
+          <record id="object0" model="/mnt/extra-addons/realtor./mnt/extra-addons/realtor">
+            <field name="name">Object 0</field>
+            <field name="value">0</field>
+          </record>
+
+          <record id="object1" model="/mnt/extra-addons/realtor./mnt/extra-addons/realtor">
+            <field name="name">Object 1</field>
+            <field name="value">10</field>
+          </record>
+
+          <record id="object2" model="/mnt/extra-addons/realtor./mnt/extra-addons/realtor">
+            <field name="name">Object 2</field>
+            <field name="value">20</field>
+          </record>
+
+          <record id="object3" model="/mnt/extra-addons/realtor./mnt/extra-addons/realtor">
+            <field name="name">Object 3</field>
+            <field name="value">30</field>
+          </record>
+
+          <record id="object4" model="/mnt/extra-addons/realtor./mnt/extra-addons/realtor">
+            <field name="name">Object 4</field>
+            <field name="value">40</field>
+          </record>
+
+
+
+           <record id="base.user_demo" model="res.users">
+            <field eval="[(4, ref('group_stock_user'))]" name="groups_id"/>
+         </record>
+         <record id="lot_product_flat" model="stock.production.lot">
+            <field name="name">Flat Stock</field>
+            <field name="product_id" ref="product.flat_id"/>
+            <field name="company_id" ref="base.main_company"/>
+         </record>
+           Resource: stock.inventory 
+
+        <record id="stock_inventory_0" model="stock.inventory">
+            <field name="name">Starting Inventory</field>
+        </record>
+
+        <record id="stock_inventory_line_1" model="stock.inventory.line">
+            <field name="product_id" ref="product.product_product_24"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_0"/>
+            <field name="product_qty">16.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+        <record id="stock_inventory_line_2" model="stock.inventory.line">
+            <field name="product_id" ref="product.product_product_7"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_0"/>
+            <field name="product_qty">18.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+        <record id="stock_inventory_line_3" model="stock.inventory.line">
+            <field name="product_id" ref="product.product_product_6"/>
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_0"/>
+            <field name="product_qty">500.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+        </record>
+-->
+      <record model="res.partner" id="immobilier_partner_01">
+        <field name="name">Immobilier ESI</field>
+       </record>
+       
+   
+      <record model="realtor.flat" id="realtor_flat_01">
+        <field name="name">Appartement London</field>
+        <field name="description">Appartement tout neuf à vendre pres de Liege Guillemens</field>
+        <field name="image" type="base64" file="realtor/img/img.jpeg"/>
+        <field name="disponibilityDate" eval="(datetime.now() + timedelta(days=90))"/>
+        <field name="price">200000</field>
+        <field name="flatSurface">56</field>
+        <field name="terraceSurface">10</field>
+        <field name="bestBuyer"></field>
+        <field name="provider" ref="immobilier_partner_01"/>
+      </record>
+      <record model="realtor.flat" id="realtor_flat_02">
+        <field name="name">Appartement Miami</field>
+        <field name="description">Appartement tout neuf à vendre pres de Bruxelles-capital</field>
+        <field name="image" type="base64" file="realtor/img/img2.jpg"/>
+        <field name="disponibilityDate" eval="(datetime.now() + timedelta(days=100))"/>
+        <field name="price">150000</field>
+        <field name="flatSurface">56</field>
+        <field name="terraceSurface">10</field>
+        <field name="bestBuyer"></field>
+         <field name="provider" ref="immobilier_partner_01"/>
+      </record>
+      <record model="realtor.flat" id="realtor_flat_03">
+        <field name="name">Appartement Pink</field>
+        <field name="description">Appartement tout neuf à vendre pres de Luxembourg et Arlon</field>
+         <field name="image" type="base64" file="realtor/img/img3.jpg"/>
+        <field name="disponibilityDate" eval="(datetime.now() + timedelta(days=120))"/>
+        <field name="price">350000</field>
+        <field name="flatSurface">56</field>
+        <field name="terraceSurface">10</field>
+        <field name="bestBuyer"></field>
+         <field name="provider" ref="immobilier_partner_01"/>
+      </record>
+      <record model="realtor.flat" id="realtor_flat_04">
+        <field name="name">Appartement Avenger</field>
+        <field name="description">Appartement tout neuf à vendre de la maison de Stromae</field>
+        <field name="image" type="base64" file="realtor/img/img4.jpg"/>
+        <field name="disponibilityDate" eval="(datetime.now() + timedelta(days=150))"/>
+        <field name="price">150000</field>
+        <field name="flatSurface">56</field>
+        <field name="terraceSurface">10</field>
+        <field name="bestBuyer"></field>
+         <field name="provider" ref="immobilier_partner_01"/>
+        </record>
+
+       
+       <record model="res.partner" id="partner_01_offer">
+        <field name="name">Austin</field>
+       </record>
+       <record model="res.partner" id="partner_02_offer">
+        <field name="name">Frank</field>
+       </record>
+       <record model="res.partner" id="partner_03_offer">
+        <field name="name">Vivace</field>
+       </record>
+
+       
+     
+        
+  
+
+
+      <record model="product.template" id="flat1">
+        <field name="name">Appartement London</field>
+        <field name="flat" ref="realtor_flat_01"/>
+        <field name="type">product</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      
+      </record>
+      
+      
+      <record model="product.template" id="flat2">
+        <field name="name">Appartement Miami</field>
+        <field name="flat" ref="realtor_flat_02"/> 
+        <field name="type">product</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+        
+      </record>
+      
+      <record model="product.template" id="flat3">
+        <field name="name">Appartement Pink</field>
+        <field name="flat" ref="realtor_flat_03"/>
+        <field name="type">product</field>
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      </record>
+      
+      <record model="product.template" id="flat4">
+        <field name="name">Appartement Avenger</field>
+        <field name="flat" ref="realtor_flat_04"/>
+        <field name="type">product</field>
+        <field name="qty_available">108</field>
+
+        <field name="uom_id" ref="uom.product_uom_unit"/>
+        <field name="uom_po_id" ref="uom.product_uom_unit"/>
+      </record>
+
+    
+        
+      
+       
+
+
+
+       <record id="stock_inventory_flat_0" model="stock.inventory">
+            <field name="name">Starting Inventory</field>
+        </record>
+
+        
+       
+        <record id="stock_inventory_line_1" model="stock.inventory.line">
+            <field name="product_id" model="product.product"
+                    eval="obj().env['product.product'].search([
+                        ('name', '=','Appartement London'),
+                    ], limit=1)"
+            />
+           
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_flat_0"/>
+            
+            <field name="product_qty">34.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+       </record>
+
+       <record id="stock_inventory_line_2" model="stock.inventory.line">
+            <field name="product_id" model="product.product"
+                    eval="obj().env['product.product'].search([
+                        ('name', '=','Appartement Miami'),
+                    ], limit=1)"
+            />
+           
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_flat_0"/>
+            
+            <field name="product_qty">24.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+       </record>
+       <record id="stock_inventory_line_3" model="stock.inventory.line">
+            <field name="product_id" model="product.product"
+                    eval="obj().env['product.product'].search([
+                        ('name', '=','Appartement Pink'),
+                    ], limit=1)"
+            />
+           
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_flat_0"/>
+            
+            <field name="product_qty">12.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+       </record>
+       <record id="stock_inventory_line_4" model="stock.inventory.line">
+            <field name="product_id" model="product.product"
+                    eval="obj().env['product.product'].search([
+                        ('name', '=','Appartement Avenger'),
+                    ], limit=1)"
+            />
+           
+            <field name="product_uom_id" ref="uom.product_uom_unit"/>
+            <field name="inventory_id" ref="stock_inventory_flat_0"/>
+            
+            <field name="product_qty">15.0</field>
+            <field name="location_id" model="stock.location" eval="obj().env.ref('stock.warehouse0').lot_stock_id.id"/>
+       </record>
+       
+      
+
+        <function model="stock.inventory" name="_action_start">
+            <function eval="[[('state','=','draft'),('id', '=', ref('stock_inventory_flat_0'))]]" model="stock.inventory" name="search"/>
+        </function>
+        <function model="stock.inventory" name="action_validate">
+            <function eval="[[('state','=','confirm'),('id', '=', ref('stock_inventory_flat_0'))]]" model="stock.inventory" name="search"/>
+            
+        </function>
+      
+      
+
+      
+
+     
+    </data>
+</odoo>
